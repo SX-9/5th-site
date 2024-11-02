@@ -44,12 +44,12 @@
         </p>
     </article>
     <section>
-        <h2 class="text-base italic m-0">Newest blog post</h2>
+        <h2 class="text-base italic m-0">Latest blog post</h2>
         <h1 class="m-0 font-normal"><a class="no-underline" href={data.fetched.blog.url} target="_blank">{data.fetched.blog.title}</a></h1>
         <p class="text-lg m-0">{months[created.getMonth()]} {created.getDate()}, {created.getFullYear()} - {data.fetched.blog.desc}</p>
     </section>
     <section>
-        <h2 class="text-base italic m-0 mt-8">GitHub Repositories</h2>
+        <h2 class="text-base italic m-0 mt-8">GitHub repositories</h2>
         <div class="flex flex-col gap-4 mt-2">
             {#each data.fetched.github as repo, i}
                 <div class="flex justify-between items-center ">
@@ -66,7 +66,7 @@
         </div>
     </section>
     <section>
-        <h2 class="text-base italic m-0 mt-8">Discord Status</h2>
+        <h2 class="text-base italic m-0 mt-8">Discord status</h2>
         <div class="flex flex-wrap my-4">
             {#if data.fetched.discord.spotify.song}
                 <div class="m-4">

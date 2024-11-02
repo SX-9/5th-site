@@ -1,8 +1,8 @@
-import type { LayoutServerLoad } from './$types';
+import type { LayoutLoad } from './$types';
 import info, { blog, discord, github } from '$lib';
 
 export const ssr = true;
-export const csr = true;
+// export const csr = true;
 export const load = (async () => {
     return {
         ...info,
@@ -12,4 +12,4 @@ export const load = (async () => {
             blog: await blog(info.blog.api, info.blog.base),
         },
     };
-}) satisfies LayoutServerLoad;
+}) satisfies LayoutLoad;
