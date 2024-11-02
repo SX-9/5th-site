@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { daysUntilBirthday, discord, getTimeIn, months, randomStr, timeAgo } from "$lib";
+    import { daysUntilBirthday, getTimeIn, months, randomStr, timeAgo } from "$lib";
     import type { PageData } from "./$types";
     export let data: PageData;
 
