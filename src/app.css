@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { @apply transition-all duration-500 ease-in-out; }
+body { @apply bg-slate-950 text-gray-400 max-w-3xl mx-auto my-8 px-4; }
+h1 { @apply text-3xl md:text-4xl font-semibold my-4; }
+h2 { @apply text-2xl md:text-3xl font-bold my-4; }
+h3 { @apply text-xl md:text-2xl font-bold my-4; }
+h4 { @apply text-lg md:text-xl font-bold my-4; }
+h5 { @apply text-base md:text-lg font-bold my-4; }
+h6 { @apply text-sm md:text-base font-bold my-4; }
+a { @apply text-sky-300 hover:text-sky-100 underline; }
+article { @apply p-2 sm:p-4 text-slate-300; }
+p { @apply my-4 text-sm sm:text-base; }
+code { @apply bg-slate-800 p-0.5 rounded-md; }
+pre { @apply bg-slate-800 p-4 rounded-md my-4 overflow-x-auto; }
+blockquote { @apply bg-slate-800 text-gray-400 p-4; }
+hr { @apply my-4 border-gray-700; }
+ul { @apply list-disc ml-6; }
+ol { @apply list-decimal ml-6; }
+header { @apply flex flex-col justify-between items-center gap-4; }
+nav { @apply flex gap-4; }
+img { @apply object-cover object-center; }
+form { @apply my-4 flex flex-col justify-center items-start; }
+input { @apply m-1 py-1 px-2 w-full border bg-gray-700 text-gray-300; }
+button { @apply m-1 py-1 px-2 w-full bg-gray-400 text-slate-900; }
+footer { @apply my-4 text-center; }
+table { @apply w-full my-4; }
+thead { @apply bg-slate-800 text-gray-400; }
+tbody { @apply bg-slate-900 text-slate-300; }
+tr, th, td { @apply p-1 border border-gray-700; }
