@@ -10,11 +10,11 @@
 
 <header>
     <div class="group border-2 border-slate-700 hover:border-slate-500 rounded-xl w-full h-32 overflow-hidden flex justify-center items-center shadow-lg">
-        <span class="text-center text-5xl font-mono my-4 cursor-default -rotate-6 leading-10 text-slate-500 group-hover:text-slate-700">
-            {randomStr(25)}<br>{randomStr(25)}
-            {randomStr(20-data.name.length/2)}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-2 no-underline text-slate-300 group-hover:text-slate-100">{data.name.toUpperCase()}</a>{randomStr(20-data.name.length/2)}
-            {randomStr(25)}<br>{randomStr(25)}
-        </span>
+        <div class="text-center text-5xl font-mono my-4 cursor-default -rotate-6 leading-10 text-slate-500 group-hover:text-slate-700">
+            <span>{randomStr(30)}<br>{randomStr(40)}</span>
+            <span class="group-hover:py-4 block">{randomStr(20-data.name.length/2)}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-slate-300 group-hover:text-slate-100">{data.name.toUpperCase()}</a>{randomStr(20-data.name.length/2)}</span>
+            <span>{randomStr(40)}<br>{randomStr(30)}</span>
+        </div>
     </div>
     <nav class="flex justify-center gap-4 text-lg max-w-full overflow-y-auto text-nowrap">
         <a href={'https://github.com/'+data.github} target="_blank">github</a>
