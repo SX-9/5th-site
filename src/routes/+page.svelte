@@ -112,4 +112,10 @@
     <p class="text-center mt-8">
         &copy; {new Date().getFullYear()} {data.legal}. All rights reserved.
     </p>
+    <nav class="flex justify-center items-center gap-2">
+        <a class="no-underline" href={'https://nixwebr.ing/prev/'+data.nixwebring}>&lt;</a>
+        <a class="no-underline" href="https://nixwebr.ing">nixwebr.ing</a>
+        <a class="no-underline" href="https://nixwebr.ing/rand">*</a>
+        <a class="no-underline" href={'https://nixwebr.ing/next/'+data.nixwebring}>&gt;</a>
+    </nav>
 </footer>

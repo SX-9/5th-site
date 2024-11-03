@@ -192,5 +192,6 @@ export default {
         api: "https://blog.satr14.my.id/pb",
         base: "https://blog.satr14.my.id/post",
         main: "https://blog.satr14.my.id/",
-    }
+    },
+    nixwebring: 'satr14',
 }
