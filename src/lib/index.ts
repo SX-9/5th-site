@@ -175,7 +175,7 @@ export default {
     subtitle: "Howdy!",
     name: "satr14",
     legal: "Satria",
-    description: "I'm Satria (also known as satr14), Im a self-taught hobbyist web developer from Indonesia. I've been programming since 2021 and I love spending my free time  working on personal projects and experimenting with new technologies.",
+    description: "I'm Satria, Im a self-taught hobbyist web developer from Indonesia. I've been programming since 2021 and I love spending my free time  working on personal projects and experimenting with new technologies.",
     skills: ["HTML", "CSS", "JavaScript", "Tailwind", "Svelte", "SvelteKit", "NodeJS", "Express", "PocketBase", "Python", "Linux", "Nginx", "Docker", "Git", "Bash", "Proxmox", "Nix"],
     birthday: [12,6],
     timezone: "Asia/Jakarta",
