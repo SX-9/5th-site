@@ -108,14 +108,14 @@
         <h3 class="italic my-0 font-normal text-xl">@<span class="underline">{data.fetched.discord.username}</span> is <span class="data-[status=idle]:text-yellow-200 data-[status=dnd]:text-red-200 data-[status=online]:text-green-200" data-status={data.fetched.discord.status}>{data.fetched.discord.status}</span> in discord</h3>
     </section>
 </main>
-<footer>
-    <p class="text-center mt-8">
-        &copy; {new Date().getFullYear()} {data.legal}. All rights reserved.
-    </p>
-    <nav class="flex justify-center items-center gap-2">
+<footer class=" mt-8">
+    <nav class="flex justify-center items-center gap-2 text-base">
         <a class="no-underline" href={'https://nixwebr.ing/prev/'+data.nixwebring}>&lt;</a>
         <a class="no-underline" href="https://nixwebr.ing">nixwebr.ing</a>
         <a class="no-underline" href="https://nixwebr.ing/rand">*</a>
         <a class="no-underline" href={'https://nixwebr.ing/next/'+data.nixwebring}>&gt;</a>
     </nav>
+    <p class="text-center m-0">
+        &copy; {new Date().getFullYear()} {data.legal}. All rights reserved.
+    </p>
 </footer>
