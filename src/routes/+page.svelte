@@ -73,7 +73,7 @@
                     <div class="flex gap-2 items-center">
                         <img class="size-12 rounded-md" src={data.fetched.discord.spotify.art} alt="album art">
                         <div>
-                            <h4 class="my-0"><a href={data.fetched.discord.spotify.link}>{data.fetched.discord.spotify.song}</a></h4>
+                            <h3 class="my-0"><a href={data.fetched.discord.spotify.link}>{data.fetched.discord.spotify.song}</a></h3>
                             <span class="italic">{data.fetched.discord.spotify.artist}</span>
                         </div>
                     </div>
@@ -109,11 +109,11 @@
     </section>
 </main>
 <footer class=" mt-8">
-    <nav class="flex justify-center items-center gap-2 text-base">
-        <a class="no-underline" href={'https://nixwebr.ing/prev/'+data.nixwebring}>&lt;</a>
-        <a class="no-underline" href="https://nixwebr.ing">nixwebr.ing</a>
-        <a class="no-underline" href="https://nixwebr.ing/rand">*</a>
-        <a class="no-underline" href={'https://nixwebr.ing/next/'+data.nixwebring}>&gt;</a>
+    <nav class="flex justify-center items-center gap-4 text-lg">
+        <a class="no-underline px-2" href={'https://nixwebr.ing/prev/'+data.nixwebring}>&lt;</a>
+        <a class="no-underline px-2" href="https://nixwebr.ing/rand">*</a>
+        <a class="no-underline px-2" href={'https://nixwebr.ing/next/'+data.nixwebring}>&gt;</a>
+        <a class="no-underline px-2" href="https://nixwebr.ing">?</a>
     </nav>
     <p class="text-center m-0">
         &copy; {new Date().getFullYear()} {data.legal}. All rights reserved.
