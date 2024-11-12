@@ -33,7 +33,7 @@
         </p>
         <p class="flex flex-wrap gap-2 text-sm">
             {#each data.skills as skill}
-                <a href={'https://google.com/search?q='+skill} target="_blank" class="bg-slate-900 text-sky-100 hover:bg-slate-800 px-2 py-1 rounded-full no-underline">{skill}</a>
+                <a href={'https://google.com/search?q='+skill} target="_blank" class="bg-slate-900 text-sky-100 hover:bg-slate-800 px-2 py-1 rounded-full no-underline text-xs sm:text-sm">{skill}</a>
             {/each}
         </p>
         <p class="flex flex-wrap gap-1">
@@ -44,12 +44,12 @@
         </p>
     </article>
     <section>
-        <h2 class="text-base italic m-0">Latest blog post</h2>
+        <h2 class="text-sm sm:text-base italic m-0">Latest blog post</h2>
         <h1 class="m-0 font-normal"><a class="no-underline" href={data.fetched.blog.url} target="_blank">{data.fetched.blog.title}</a></h1>
         <p class="text-lg m-0">{months[created.getMonth()]} {created.getDate()}, {created.getFullYear()} - {data.fetched.blog.desc}</p>
     </section>
     <section>
-        <h2 class="text-base italic m-0 mt-8">GitHub repositories</h2>
+        <h2 class="text-sm sm:text-base italic m-0 mt-8">GitHub repositories</h2>
         <div class="flex flex-col gap-4 mt-2">
             {#each data.fetched.github as repo, i}
                 <div class="flex justify-between items-center ">
@@ -66,18 +66,18 @@
         </div>
     </section>
     <section>
-        <h2 class="text-base italic m-0 mt-8">Discord status</h2>
-        <div class="flex flex-wrap my-4">
+        <h2 class="italic font-normal mt-8 text-base sm:text-lg">@<span class="underline">{data.fetched.discord.username}</span> is <span class="data-[status=idle]:text-yellow-200 data-[status=dnd]:text-red-200 data-[status=online]:text-green-200" data-status={data.fetched.discord.status}>{data.fetched.discord.status}</span> on discord</h2>
+        <div class="flex flex-wrap sm:justify-evenly my-4">
             {#if data.fetched.discord.spotify.song}
                 <div class="m-4">
                     <div class="flex gap-2 items-center">
                         <img class="size-12 rounded-md" src={data.fetched.discord.spotify.art} alt="album art">
-                        <div>
-                            <h3 class="my-0"><a href={data.fetched.discord.spotify.link}>{data.fetched.discord.spotify.song}</a></h3>
-                            <span class="italic">{data.fetched.discord.spotify.artist}</span>
+                        <div class="max-w-64 truncate">
+                            <h3 class="my-0 inline"><a href={data.fetched.discord.spotify.link}>{data.fetched.discord.spotify.song}</a></h3>
+                            <br><span class="italic">{data.fetched.discord.spotify.artist}</span>
                         </div>
                     </div>
-                    <span class="italic text-sm">Listening to Spotify</span>
+                    <span class="italic text-sm">Listening to <b>Spotify</b></span>
                 </div>
             {/if}
             {#each data.fetched.discord.activity as activity}
@@ -91,7 +91,7 @@
                             <img class="size-6 rounded-full absolute -bottom-1 -right-1" src={activity.images.small} alt="small">
                             {/if}
                         </div>
-                        <span class="italic">
+                        <span class="italic text-sm">
                             Started {timeAgo(activity.started)}
                             {#if activity.state}
                             <br>{activity.state}
@@ -101,11 +101,10 @@
                             {/if}
                         </span>
                     </div>
-                    <span class="italic text-sm">Playing {activity.name}</span>
+                    <span class="italic text-sm">Playing <b>{activity.name}</b></span>
                 </div>
             {/each}
         </div>
-        <h3 class="italic my-0 font-normal text-xl">@<span class="underline">{data.fetched.discord.username}</span> is <span class="data-[status=idle]:text-yellow-200 data-[status=dnd]:text-red-200 data-[status=online]:text-green-200" data-status={data.fetched.discord.status}>{data.fetched.discord.status}</span> in discord</h3>
     </section>
 </main>
 <footer class=" mt-8">

@@ -180,7 +180,7 @@ export default {
     birthday: [12,6],
     timezone: "Asia/Jakarta",
     links: {
-        "Blog website": "https://blog.satr14.my.id/",
+        "NixOS Flake": "https://github.com/SX-9/nix-conf",
         "Terminal portfolio": "https://github.com/SX-9/term-port/",
         "Project part-of.my.id": "https://part-of.my.id/",
         "DVD logo bounce": "https://sx-9.github.io/dvd-bounce/",
