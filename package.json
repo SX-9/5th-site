@@ -24,7 +24,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-cloudflare": "^4.7.4",
-		"figlet": "^1.8.0"
+		"@sveltejs/adapter-cloudflare": "^4.7.4"
 	}
 }
