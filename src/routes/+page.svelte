@@ -66,7 +66,10 @@
         </div>
     </section>
     <section>
-        <h2 class="italic font-normal mt-8 text-base sm:text-lg">@<span class="underline">{data.fetched.discord.username}</span> is <span class="data-[status=idle]:text-yellow-200 data-[status=dnd]:text-red-200 data-[status=online]:text-green-200" data-status={data.fetched.discord.status}>{data.fetched.discord.status}</span> on discord</h2>
+        <h2 class="italic font-normal mt-8 text-base sm:text-lg flex justify-between items-center">
+            <span>@<span class="underline">{data.fetched.discord.username}</span></span>
+            <span class="data-[status=idle]:text-yellow-200 data-[status=dnd]:text-red-200 data-[status=online]:text-green-200" data-status={data.fetched.discord.status}><b>{data.fetched.discord.status}</b></span>
+        </h2>
         <div class="flex flex-wrap sm:justify-evenly my-4">
             {#if data.fetched.discord.spotify.song}
                 <div class="m-4">
