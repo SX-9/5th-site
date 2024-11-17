@@ -16,12 +16,11 @@ Its \x1b[1m${time}\x1b[0m in ${info.timezone}.
 
 \x1b[3m${info.skills.join('\x1b[0m, \x1b[3m')}\x1b[0m
 
-${Object.entries(info.links).map(([key, value]) => `\x1b[1m${key}\x1b[0m: \x1b[4m${value}\x1b[0m`).join('\n')}
+${Object.entries(info.links).map(([key, value]) => `- \x1b[1m${key}\x1b[0m: \x1b[4m${value}\x1b[0m`).join('\n')}
 
-\x1b[1mgithub\x1b[0m: ${info.github}
-\x1b[1mdiscord\x1b[0m: ${info.discord}
-\x1b[1mblog\x1b[0m: ${info.blog.main}
+\x1b[1m\ github\x1b[0m: ${info.github}
+\x1b[1m\ discord\x1b[0m: ${info.discord}
+\x1b[1m\ blog\x1b[0m: ${info.blog.main}
 
-\x1b[37;3m${info.title} - curl version ;)\x1b[0m
-`);
+\x1b[2;3m${info.title} - ${event.request.headers.get('user-agent')} version ;)\x1b[0m\n`);
 };

@@ -117,7 +117,7 @@
         <a class="no-underline px-2" href={'https://nixwebr.ing/next/'+data.nixwebring}>&gt;</a>
         <a class="no-underline px-2" href="https://nixwebr.ing">?</a>
     </nav>
-    <p class="text-center m-0">
-        &copy; {new Date().getFullYear()} {data.legal}. All rights reserved.
+    <p class="text-center m-0 font-mono italic">
+        curl https://satr14.my.id
     </p>
 </footer>
