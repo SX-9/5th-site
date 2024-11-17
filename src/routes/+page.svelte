@@ -27,10 +27,10 @@
     <article>
         <h1>{data.subtitle}</h1>
         <p>{data.description}</p>
-        <p class="text-sm italic">
+        <p class="text-sm"><i>
             <b>{days || 'Today'}</b> { days ? 'day' + (days === 1 ? '' : 's') + ' until my birthday.' : 'is my birthday!' }
             It's <b>{time}</b> for me.
-        </p>
+        </i></p>
         <p class="flex flex-wrap gap-2 text-sm">
             {#each data.skills as skill}
                 <a href={'https://google.com/search?q='+skill} target="_blank" class="bg-slate-900 text-sky-100 hover:bg-slate-800 px-2 py-1 rounded-full no-underline text-xs sm:text-sm">{skill}</a>
@@ -58,7 +58,7 @@
                         <p class="m-0">{repo.desc}</p>
                     </div>
                     <div class="text-right">
-                        {#if repo.lang}<span class="italic">{repo.lang}</span>{/if}<br>
+                        {#if repo.lang}<i>{repo.lang}</i>{/if}<br>
                         {#if repo.stars}<span class="text-yellow-200"><b>{repo.stars}</b> star{repo.stars>1?'s':''}</span>{/if}
                     </div>
                 </div>
@@ -67,20 +67,20 @@
     </section>
     <section>
         <h2 class="italic font-normal mt-8 text-base sm:text-lg flex justify-between items-center">
-            <span>@<span class="underline">{data.fetched.discord.username}</span></span>
+            <span>@<u>{data.fetched.discord.username}</u></span>
             <span class="data-[status=idle]:text-yellow-200 data-[status=dnd]:text-red-200 data-[status=online]:text-green-200" data-status={data.fetched.discord.status}><b>{data.fetched.discord.status}</b></span>
         </h2>
         <div class="flex flex-wrap sm:justify-evenly my-4">
             {#if data.fetched.discord.spotify.song}
                 <div class="m-4">
+                    <span class="italic text-sm">Listening to <b>Spotify</b></span>
                     <div class="flex gap-2 items-center">
                         <img class="size-12 rounded-md" src={data.fetched.discord.spotify.art} alt="album art">
                         <div class="max-w-64 truncate">
                             <h3 class="my-0 inline"><a href={data.fetched.discord.spotify.link}>{data.fetched.discord.spotify.song}</a></h3>
-                            <br><span class="italic">{data.fetched.discord.spotify.artist}</span>
+                            <br><i>{data.fetched.discord.spotify.artist}</i>
                         </div>
                     </div>
-                    <span class="italic text-sm">Listening to <b>Spotify</b></span>
                 </div>
             {/if}
             {#each data.fetched.discord.activity as activity}
@@ -94,17 +94,19 @@
                             <img class="size-6 rounded-full absolute -bottom-1 -right-1" src={activity.images.small} alt="small">
                             {/if}
                         </div>
-                        <span class="italic text-sm">
-                            Started {timeAgo(activity.started)}
-                            {#if activity.state}
-                            <br>{activity.state}
-                            {/if}
-                            {#if activity.details}
-                            <br>{activity.details}
-                            {/if}
+                        <span class="text-sm">
+                            <h3 class="my-0 inline text-lg"><b>{activity.name}</b></h3>
+                            <i>
+                                {#if activity.state}
+                                    <br>{activity.state}
+                                {/if}
+                                {#if activity.details}
+                                    <br>{activity.details}
+                                {/if}
+                            </i>
                         </span>
                     </div>
-                    <span class="italic text-sm">Playing <b>{activity.name}</b></span>
+                    <span class="text-sm"><i>Started {timeAgo(activity.started)}</i></span>
                 </div>
             {/each}
         </div>
