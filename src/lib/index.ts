@@ -181,10 +181,10 @@ export default {
     timezone: "Asia/Jakarta",
     links: {
         "NixOS Flake": "https://github.com/SX-9/nix-conf",
-        "Terminal portfolio": "https://github.com/SX-9/term-port/",
         "Project part-of.my.id": "https://part-of.my.id/",
-        "DVD logo bounce": "https://sx-9.github.io/dvd-bounce/",
+        "Forever Maze": "https://forever-maze.satr14.my.id/",
         "Chess from scratch": "https://sx-9.github.io/chess-from-scratch/",
+        "CDN": "https://cdn.satr14.my.id/",
     },
     discord: "882595027132493864",
     github: "SX-9",
