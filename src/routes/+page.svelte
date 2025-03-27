@@ -13,7 +13,7 @@
 <div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-10 from-ctp-sapphire via-transparent to-ctp-green"></div>
 
 
-<div class="fixed top-0 left-0 w-full h-full overflow-hidden flex justify-center items-center">
+<div class="fixed top-0 left-0 w-full h-full overflow-hidden flex justify-center items-center select-none">
     <div class="group whitespace-nowrap text-center text-5xl font-mono my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 hover:text-ctp-base">
         <span class="inline-block animate-scrolling-text-to-l">{randomStr(charAmount)}</span><br>
         <span class="block">{randomStr(Math.round(charAmount-data.name.length/2))}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-ctp-subtext1 group-hover:text-ctp-text">{data.name.toUpperCase()}</a>{randomStr(Math.round(charAmount-data.name.length/2))}</span>
