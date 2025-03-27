@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { page } from "$app/stores";
     import { daysUntilBirthday, getTimeIn, months, randomStr, timeAgo } from "$lib";
     import type { PageData } from "./$types";
     export let data: PageData;
@@ -6,9 +7,11 @@
     let days = daysUntilBirthday(data.birthday);
     let time = getTimeIn(data.timezone);
     let charAmount = 50;
+    let webring = $page.url.searchParams.has('webring');
 </script>
 
 <div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-10 from-ctp-sapphire via-transparent to-ctp-green"></div>
+
 
 <div class="fixed top-0 left-0 w-full h-full overflow-hidden flex justify-center items-center">
     <div class="group whitespace-nowrap text-center text-5xl font-mono my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 hover:text-ctp-base">
@@ -17,6 +20,17 @@
         <span class="inline-block animate-scrolling-text-to-r">{randomStr(charAmount)}</span><br>
     </div>
 </div>
+
+{#if webring}
+    <div class="fixed top-0 left-0 w-full text-base flex justify-center items-center">
+        <nav class="py-2 px-4 backdrop-blur rounded-t-3xl border-ctp-base hover:border-ctp-sky">
+            <a href="https://nixwebr.ing" class="no-underline">nixwebr.ing:</a>
+            <a href="https://nixwebr.ing/prev/" class="no-underline">&larr;</a>
+            <a href="https://nixwebr.ing/rand/" class="no-underline">?</a>
+            <a href="https://nixwebr.ing/next/" class="no-underline">&rarr;</a>
+        </nav>
+    </div>
+{/if}
     
 <div class="h-[calc(100%-8rem)] sm:h-[calc(100%-6rem)]"></div>
 
@@ -30,7 +44,7 @@
                     <a href={data.blog} target="_blank">blog</a>
                 </div>
                 <!-- svelte-ignore a11y-autofocus -->
-                <a href="/#abt" id="abt" class="text-center no-underline" autofocus>^</a>
+                <a href="/#abt" id="abt" class="text-center no-underline" autofocus>&uarr;</a>
                 <p class="text-center m-0 font-mono italic hidden sm:block">curl https://satr14.my.id</p>
             </nav>
         </header>
