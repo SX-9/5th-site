@@ -6,7 +6,7 @@
 
     let days = daysUntilBirthday(data.birthday);
     let time = getTimeIn(data.timezone);
-    let charAmount = 50;
+    let charAmount = 128;
     let webring = $page.url.searchParams.has('webring');
 </script>
 
