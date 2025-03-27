@@ -5,55 +5,69 @@
 
     let days = daysUntilBirthday(data.birthday);
     let time = getTimeIn(data.timezone);
+    let charAmount = 50;
 </script>
 
-<header>
-    <div class="group border-2 border-ctp-base hover:border-ctp-overlay1 rounded-xl w-full h-32 overflow-hidden flex justify-center items-center shadow-lg">
-        <div class="text-center text-5xl font-mono my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 group-hover:text-ctp-base">
-            <span>{randomStr(30)}<br>{randomStr(40)}</span>
-            <span class="group-hover:py-4 block">{randomStr(20-data.name.length/2)}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-ctp-subtext1 group-hover:text-ctp-text">{data.name.toUpperCase()}</a>{randomStr(20-data.name.length/2)}</span>
-            <span>{randomStr(40)}<br>{randomStr(30)}</span>
-        </div>
+<div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-10 from-ctp-sapphire via-transparent to-ctp-green"></div>
+
+<div class="fixed top-0 left-0 w-full h-full overflow-hidden flex justify-center items-center">
+    <div class="group whitespace-nowrap text-center text-5xl font-mono my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 hover:text-ctp-base">
+        <span class="inline-block animate-scrolling-text-to-l">{randomStr(charAmount)}</span><br>
+        <span class="block">{randomStr(Math.round(charAmount-data.name.length/2))}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-ctp-subtext1 group-hover:text-ctp-text">{data.name.toUpperCase()}</a>{randomStr(Math.round(charAmount-data.name.length/2))}</span>
+        <span class="inline-block animate-scrolling-text-to-r">{randomStr(charAmount)}</span><br>
     </div>
-    <nav class="flex justify-between items-center gap-4 text-lg max-w-full w-full px-4 overflow-y-auto text-nowrap">
-        <div class="flex justify-center gap-4">
-            <a href={'https://github.com/'+data.github} target="_blank">github</a>
-            <a href={'https://discordapp.com/users/'+data.discord} target="_blank">discord</a>
-            <a href={data.blog} target="_blank">blog</a>
-        </div>
-        <p class="text-center m-0 font-mono italic">curl https://satr14.my.id</p>
-    </nav>
-</header>
+</div>
+    
+<div class="h-[calc(100%-8rem)] sm:h-[calc(100%-6rem)]"></div>
 
-<main>
-    <article>
-        <h1>{data.subtitle}</h1>
-        <p>{data.description}</p>
-        <p class="text-sm"><i>
-            It's <b>{time}</b> in <b>{data.timezone}</b>.
-            <b>{days || 'Today'}</b> { days ? 'day' + (days === 1 ? '' : 's') + ' until my birthday.' : 'is my birthday!' }
-        </i></p>
-        <p class="flex flex-wrap gap-2 text-sm">
-            {#each data.skills as skill}
-                <a href={'https://google.com/search?q='+skill} target="_blank" class="bg-ctp-mantle text-ctp-text hover:bg-ctp-base px-2 py-1 rounded-full no-underline text-xs sm:text-sm">{skill}</a>
-            {/each}
-        </p>
-        <p class="flex flex-wrap gap-1">
-            {#each Object.entries(data.links) as link, i}
-                {#if i > 0}<span class="text-ctp-subtext1">~</span>{/if}
-                <a href={link[1]} target="_blank">{link[0]}</a>
-            {/each}
-        </p>
-    </article>
-</main>
-
-
-
-<footer class=" mt-8">
-    <nav class="flex justify-center items-center gap-4 text-lg">
-        <a class="no-underline px-2" href="https://nixwebr.ing">nixwebr.ing:</a>
-        <a class="no-underline px-2" href="https://nixwebr.ing/prev/satr14">&lt;</a>
-        <a class="no-underline px-2" href="https://nixwebr.ing/rand">*</a>
-        <a class="no-underline px-2" href="https://nixwebr.ing/next/satr14">&gt;</a>
-    </nav>
-</footer>
+<div class="backdrop-blur-md w-[calc(100%-2rem)] ml-4 pt-4 border-t-2 border-x-2 border-ctp-base hover:border-ctp-sky shadow-inner rounded-t-3xl">
+    <div class="max-w-3xl mx-auto px-4 pt-2 sm:pt-4">
+        <header>
+            <nav class="flex flex-col-reverse sm:flex-row justify-center sm:justify-between items-center sm:gap-4 text-lg max-w-full w-full px-4 overflow-y-auto text-nowrap">
+                <div class="flex justify-center gap-4">
+                    <a href={'https://github.com/'+data.github} target="_blank">github</a>
+                    <a href={'https://discordapp.com/users/'+data.discord} target="_blank">discord</a>
+                    <a href={data.blog} target="_blank">blog</a>
+                </div>
+                <!-- svelte-ignore a11y-autofocus -->
+                <a href="/#abt" id="abt" class="text-center no-underline" autofocus>^</a>
+                <p class="text-center m-0 font-mono italic hidden sm:block">curl https://satr14.my.id</p>
+            </nav>
+        </header>
+        
+        <main>
+            <article>
+                <h1>{data.subtitle}</h1>
+                <p>{data.description}</p>
+                <p class="text-sm"><i>
+                    It's <b>{time}</b> in <b>{data.timezone}</b>.
+                    <b>{days || 'Today'}</b> { days ? 'day' + (days === 1 ? '' : 's') + ' until my birthday.' : 'is my birthday!' }
+                </i></p>
+                <p class="flex flex-wrap gap-2 text-sm">
+                    {#each data.skills as skill}
+                        <a href={'https://google.com/search?q='+skill} target="_blank" class="bg-ctp-surface0 text-ctp-text hover:bg-ctp-base px-2 py-1 rounded-full no-underline text-xs sm:text-sm">{skill}</a>
+                    {/each}
+                </p>
+                <p class="flex flex-wrap gap-1">
+                    {#each Object.entries(data.links) as [title, url], i}
+                        {#if i > 0}<span class="text-ctp-subtext1">~</span>{/if}
+                        <a href={url} target="_blank">{title}</a>
+                    {/each}
+                </p>
+            </article>
+            <section class="flex flex-wrap gap-4 px-4 pb-4">
+                {#each Object.entries(data.communities) as [name,details], i}
+                    <div class="inline-block">
+                        <div class="flex gap-2">
+                            <img src={details.icon} alt={name} class="size-12 rounded-lg">
+                            <div>
+                                <h2 class="text-base m-0"><a href={details.url}>{name}</a></h2>
+                                <span>{details.role}</span>
+                            </div>
+                        </div>
+                    </div>
+                {/each}
+            </section>
+        </main>
+    </div>
+</div>

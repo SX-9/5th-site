@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 * { @apply transition-all duration-300 ease-in-out; }
-body { @apply bg-ctp-crust text-ctp-text max-w-3xl mx-auto my-8 px-4; }
+html { @apply h-full scroll-smooth; }
+body { @apply bg-ctp-crust text-ctp-text h-full; }
 h1 { @apply text-3xl md:text-4xl font-semibold my-4; }
 h2 { @apply text-2xl md:text-3xl font-bold my-4; }
 h3 { @apply text-xl md:text-2xl font-bold my-4; }
