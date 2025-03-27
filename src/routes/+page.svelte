@@ -44,7 +44,7 @@
                     <a href={data.blog} target="_blank">blog</a>
                 </div>
                 <!-- svelte-ignore a11y-autofocus -->
-                <a href="/#abt" id="abt" class="text-center no-underline" autofocus>&uarr;</a>
+                <a href="/#abt" id="abt" class="text-center no-underline text-xl font-extrabold" autofocus>&uarr;</a>
                 <p class="text-center m-0 font-mono italic hidden sm:block">curl https://satr14.my.id</p>
             </nav>
         </header>
