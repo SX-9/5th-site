@@ -1,8 +1,8 @@
 import type { LayoutLoad } from './$types';
-import info, { blog, discord, github } from '$lib';
+import info from '$lib';
 
 export const ssr = true;
-export const csr = false;
+export const csr = true;
 export const load = (async () => {
     return {
         ...info,

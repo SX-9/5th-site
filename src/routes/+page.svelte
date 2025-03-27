@@ -1,13 +1,18 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { daysUntilBirthday, getTimeIn, months, randomStr, timeAgo } from "$lib";
+    import { daysUntilBirthday, getTimeIn, randomStr } from "$lib";
+    import { onMount } from "svelte";
     import type { PageData } from "./$types";
     export let data: PageData;
 
     let days = daysUntilBirthday(data.birthday);
     let time = getTimeIn(data.timezone);
-    let charAmount = 128;
+    let charAmount = 0;
     let webring = $page.url.searchParams.has('webring');
+
+    onMount(() => {
+        charAmount = Math.floor(window.innerWidth / 20);
+    });
 </script>
 
 <div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-10 from-ctp-sapphire via-transparent to-ctp-green"></div>
