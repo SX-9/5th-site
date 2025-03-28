@@ -28,7 +28,7 @@
 </script>
 
 <div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-10 from-ctp-green via-transparent to-ctp-lavender" transition:fade={{
-    duration: 1000, easing: cubicOut
+    duration: 1500, easing: cubicOut
 }}></div>
 
 <div class="fixed top-0 left-0 w-full h-full overflow-hidden flex justify-center items-center select-none" transition:blur={{
@@ -60,7 +60,7 @@
 <div class="h-[calc(100%-8rem)] sm:h-[calc(100%-6rem)]"></div>
 
 <div class="backdrop-blur-md w-[calc(100%-2rem)] ml-4 pt-4 border-t-2 border-x-2 border-ctp-base hover:border-ctp-sky shadow-inner rounded-t-3xl" transition:fly={{
-    duration: 1000, easing: cubicOut, y: 200, opacity: 0,
+    duration: 1500, easing: cubicOut, y: 200, opacity: 0,
 }}>
     <div class="max-w-3xl mx-auto px-4 pt-2 sm:pt-4">
         <header>

@@ -11,7 +11,7 @@ h3 { @apply text-xl md:text-2xl font-bold my-4; }
 h4 { @apply text-lg md:text-xl font-bold my-4; }
 h5 { @apply text-base md:text-lg font-bold my-4; }
 h6 { @apply text-sm md:text-base font-bold my-4; }
-a { @apply text-ctp-sapphire hover:text-ctp-sky underline focus:before:content-['>_'] focus:after:content-['_<'] focus:outline-none transition-none focus:no-underline; }
+a { @apply text-ctp-sapphire hover:text-ctp-sky underline focus:before:content-['_[_'] focus:after:content-['_]_'] focus:outline-none focus:no-underline; }
 article { @apply p-2 sm:p-4 text-ctp-subtext0; }
 p { @apply my-4 text-sm sm:text-base; }
 code { @apply bg-ctp-overlay0 p-0.5 rounded-md; }
