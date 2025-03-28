@@ -1,7 +1,13 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    export let data: PageData;
     import "../app.css";
+    import { onMount } from 'svelte';
+    export let data: PageData;
+
+    let loaded = false;
+    onMount(() => {
+        loaded = true;
+    });
 </script>
 
 <svelte:head>
@@ -10,4 +16,6 @@
     <meta name="theme-color" content="#00e1ff" />
 </svelte:head>
 
-<slot />
+{#if loaded}
+    <slot />
+{/if}
