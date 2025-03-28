@@ -45,9 +45,9 @@
     <nav class="py-2 px-4 backdrop-blur rounded-t-3xl border-ctp-base hover:border-ctp-sky">
         {#if webring}
             <a href="https://nixwebr.ing" class="no-underline">nixwebr.ing:</a>
-            <a href="https://nixwebr.ing/prev/" class="no-underline">&larr;</a>
+            <a href="https://nixwebr.ing/prev/satr14" class="no-underline">&larr;</a>
             <a href="https://nixwebr.ing/rand/" class="no-underline">?</a>
-            <a href="https://nixwebr.ing/next/" class="no-underline">&rarr;</a>
+            <a href="https://nixwebr.ing/next/satr14" class="no-underline">&rarr;</a>
         {:else}
             <p class="animate-pulse italic text-base">
                 <span class="hidden sm:block">Press [Enter] to continue.</span>

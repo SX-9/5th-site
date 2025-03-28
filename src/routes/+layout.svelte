@@ -6,7 +6,9 @@
 
     let loaded = false;
     onMount(() => {
-        loaded = true;
+        const handleVisibilityChange = () => loaded = document.visibilityState === 'visible';
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        handleVisibilityChange();
     });
 </script>
 
