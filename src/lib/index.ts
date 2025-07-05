@@ -158,7 +158,7 @@ export function timeAgo(unixTimestamp: number): string {
 
 export function randomStr(length: number): string {
     let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.toUpperCase();
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'.toUpperCase();
     const charactersLength = characters.length;
     let counter = 0;
     while (counter < length) {
@@ -205,5 +205,7 @@ export default {
     },
     discord: "882595027132493864",
     github: "SX-9",
+    reddit: "Frequent_Outside_741",
+    steam: "satr14",
     blog: "https://blog.satr14.my.id/",
 }

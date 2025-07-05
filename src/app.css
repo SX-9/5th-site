@@ -1,17 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: Stray;
+  src: url("/stray.otf") format("opentype");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * { @apply transition-all duration-300 ease-in-out; }
 html { @apply h-full scroll-smooth; }
-body { @apply bg-ctp-crust text-ctp-text h-full; }
+body { @apply bg-ctp-crust text-ctp-text h-full font-[Roboto,_sans-serif]; }
 h1 { @apply text-3xl md:text-4xl font-semibold my-4; }
 h2 { @apply text-2xl md:text-3xl font-bold my-4; }
 h3 { @apply text-xl md:text-2xl font-bold my-4; }
 h4 { @apply text-lg md:text-xl font-bold my-4; }
 h5 { @apply text-base md:text-lg font-bold my-4; }
 h6 { @apply text-sm md:text-base font-bold my-4; }
-a { @apply text-ctp-sapphire hover:text-ctp-sky underline focus:before:content-['_[_'] focus:after:content-['_]_'] focus:outline-none focus:no-underline; }
+a { @apply text-ctp-sapphire hover:text-ctp-sky focus:outline-none no-underline; }
 article { @apply p-2 sm:p-4 text-ctp-subtext0; }
 p { @apply my-4 text-sm sm:text-base; }
 code { @apply bg-ctp-overlay0 p-0.5 rounded-md; }
