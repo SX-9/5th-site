@@ -27,14 +27,14 @@
     });
 </script>
 
-<div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-10 from-ctp-green via-transparent to-ctp-lavender" transition:fade={{
+<div class="fixed top-0 left-0 w-full h-full -bg-gradient-6 opacity-25 from-ctp-sapphire via-transparent to-ctp-sapphire" transition:fade={{
     duration: 1500, easing: cubicOut
 }}></div>
 
 <div class="fixed top-0 left-0 w-full h-full overflow-hidden flex justify-center items-center select-none" transition:blur={{
     duration: 1000, easing: cubicOut,
 }}>
-    <div class="font-[Stray] group whitespace-nowrap text-center text-5xl my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 hover:text-ctp-base">
+    <div class="font-[Stray,_monospace] group whitespace-nowrap text-center text-5xl my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 hover:text-ctp-base">
         <span class="inline-block animate-scrolling-text-to-l">{randomStr(charAmount)}</span><br>
         <span class="block">{randomStr(Math.round(charAmount-data.name.length/2))}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-ctp-subtext1 group-hover:text-ctp-text">{data.name.toUpperCase()}</a>{randomStr(Math.round(charAmount-data.name.length/2))}</span>
         <span class="inline-block animate-scrolling-text-to-r">{randomStr(charAmount)}</span><br>
@@ -72,7 +72,7 @@
                     <a href={'https://steamcommunity.com/id/'+data.steam} target="_blank">steam</a>
                     <a href={data.blog} target="_blank">blog</a>
                 </div>
-                <!-- svelte-ignore a11y_autofocus -->
+                <!-- svelte-ignore a11y-autofocus -->
                 <a href="/#abt" id="abt" class="text-center no-underline text-xl font-extrabold" autofocus>&uarr;</a>
                 <p class="text-center m-0 font-mono italic hidden md:block">curl https://satr14.my.id</p>
             </nav>
@@ -97,7 +97,8 @@
                     {/each}
                 </p>
             </article>
-            <section class="flex flex-wrap gap-4 px-4 pb-4">
+            <!-- hate optimizing images ;-; -->
+            <!-- <section class="flex flex-wrap gap-4 px-4 pb-4">
                 {#each Object.entries(data.communities) as [name,details], i}
                     <div class="inline-block">
                         <div class="flex gap-2">
@@ -109,7 +110,7 @@
                         </div>
                     </div>
                 {/each}
-            </section>
+            </section> -->
         </main>
     </div>
 </div>

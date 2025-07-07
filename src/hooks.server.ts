@@ -3,7 +3,6 @@ import info from '$lib';
 
 export const handle: Handle = async ({ event, resolve }) => !event.request.headers.get('user-agent')?.includes('curl') ? await resolve(event) : new Response(`\
 \
-\x1b[2J\x1b[3J\x1b[H\
 \x1b[1m${info.subtitle}\x1b[0m
 ${info.description}
 
