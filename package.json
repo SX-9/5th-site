@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-cloudflare": "^4.7.4"
+		"@sveltejs/adapter-cloudflare": "^4.7.4",
+		"caniuse-lite": "^1.0.30001726"
 	}
 }
