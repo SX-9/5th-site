@@ -66,10 +66,10 @@
         <header>
             <nav class="overflow-hidden flex flex-col-reverse sm:flex-row justify-center sm:justify-between items-center sm:gap-4 text-lg max-w-full w-full px-4 overflow-y-auto text-nowrap">
                 <div class="flex justify-center gap-4">
-                    <a href={'https://github.com/'+data.github} target="_blank">github</a>
-                    <a href={'https://discordapp.com/users/'+data.discord} target="_blank">discord</a>
-                    <a href={'https://www.reddit.com/user/'+data.reddit} target="_blank">reddit</a>
-                    <a href={'https://steamcommunity.com/id/'+data.steam} target="_blank">steam</a>
+                    <a href={'https://github.com/'+data.github} target="_blank">gh</a>
+                    <a href={'https://discordapp.com/users/'+data.discord} target="_blank">dc</a>
+                    <a href={'https://www.reddit.com/user/'+data.reddit} target="_blank">rdt</a>
+                    <a href={'https://steamcommunity.com/id/'+data.steam} target="_blank">stm</a>
                     <a href={data.blog} target="_blank">blog</a>
                 </div>
                 <!-- svelte-ignore a11y-autofocus -->
