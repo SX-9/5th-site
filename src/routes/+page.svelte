@@ -36,7 +36,7 @@
 }}>
     <div class="font-[Stray,_monospace] group whitespace-nowrap text-center text-5xl my-4 cursor-default -rotate-6 leading-10 text-ctp-overlay1 hover:text-ctp-base">
         <span class="inline-block animate-scrolling-text-to-l">{randomStr(charAmount)}</span><br>
-        <span class="block">{randomStr(Math.round(charAmount-data.name.length/2))}<a href={'https://github.com/'+data.github+'/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-ctp-subtext1 group-hover:text-ctp-text">{data.name.toUpperCase()}</a>{randomStr(Math.round(charAmount-data.name.length/2))}</span>
+        <span class="block">{randomStr(Math.round(charAmount-data.name.length/2))}<a href={'https://github.com/SX-9/5th-site'} target="_blank" class="group-hover:px-8 no-underline text-ctp-subtext1 group-hover:text-ctp-text">{data.name.toUpperCase()}</a>{randomStr(Math.round(charAmount-data.name.length/2))}</span>
         <span class="inline-block animate-scrolling-text-to-r">{randomStr(charAmount)}</span><br>
     </div>
 </div>
@@ -66,11 +66,9 @@
         <header>
             <nav class="overflow-hidden flex flex-col-reverse sm:flex-row justify-center sm:justify-between items-center sm:gap-4 text-lg max-w-full w-full px-4 overflow-y-auto text-nowrap">
                 <div class="flex justify-center gap-4">
-                    <a href={'https://github.com/'+data.github} target="_blank">gh</a>
-                    <a href={'https://discordapp.com/users/'+data.discord} target="_blank">dc</a>
-                    <a href={'https://www.reddit.com/user/'+data.reddit} target="_blank">rdt</a>
-                    <a href={'https://steamcommunity.com/id/'+data.steam} target="_blank">stm</a>
-                    <a href={data.blog} target="_blank">blog</a>
+                    {#each Object.entries(data.socials) as [name, url]}
+                        <a href={url} target="_blank">{name}</a>
+                    {/each}
                 </div>
                 <!-- svelte-ignore a11y-autofocus -->
                 <a href="/#abt" id="abt" class="text-center no-underline text-xl font-extrabold" autofocus>&uarr;</a>

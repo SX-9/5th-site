@@ -203,9 +203,11 @@ export default {
             url: "https://hackclub.com/",
         },
     },
-    discord: "882595027132493864",
-    github: "SX-9",
-    reddit: "Frequent_Outside_741",
-    steam: "satr14",
-    blog: "https://blog.satr14.my.id/",
+    socials: {
+        dc: "https://discord.com/users/882595027132493864",
+        gh: "https://github.com/SX-9",
+        rdt: "https://reddit.com/u/Frequent_Outside_741",
+        stm: "https://steamcommunity.com/id/satr14",
+        blog: "https://blog.satr14.my.id/",
+    },
 }
