@@ -208,6 +208,6 @@ export default {
         gh: "https://github.com/SX-9",
         rdt: "https://reddit.com/u/Frequent_Outside_741",
         stm: "https://steamcommunity.com/id/satr14",
-        blog: "https://blog.satr14.my.id/",
+        mail: "mailto:admin@satr14.my.id",
     },
 }
